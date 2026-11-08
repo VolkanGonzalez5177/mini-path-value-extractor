@@ -1,6 +1,6 @@
 {
   "name": "mini-path-value-extractor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Looks up a value in an object by dot or bracket path and reports if it exists.",
   "type": "module",
   "main": "src/index.js",
