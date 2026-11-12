@@ -30,3 +30,10 @@ The trade-off is that bracket notation is only interpreted as an array index. Ob
 - If an intermediate value is `null` or `undefined`, the path is reported as missing, even if the final key would exist.
 - A property that exists with value `undefined` returns `{ value: undefined, exists: true }`.
 - Bracket indices are non-negative integers; negative or non-numeric indices are treated as object keys.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
